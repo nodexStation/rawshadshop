@@ -2,12 +2,12 @@
 
 The identity system for Rawshad (RAW-স্বাদ). The website uses these exact tokens in `styles.css` — Instagram slides, packaging and any future design should reuse the same tokens so the brand looks like one business everywhere.
 
-## Logo lockup
-- **Monogram:** maroon rounded square with a gold leaf/nut mark (`favicon.svg`, and the `#leafmark` symbol in `index.html`).
-- **Wordmark:** "Rawshad" in Fraunces (display serif), maroon on cream, gold on deep maroon.
-- **Tagline under the wordmark:** PURE. NATURAL. DELICIOUS. — letter-spaced capitals, gold.
-- **Rules:** keep clear space around the lockup equal to the height of the monogram on all sides. Never stretch, rotate or re-colour the monogram. Minimum size: monogram 24px, full lockup 120px wide.
-- **Signature motif:** a small leaf sprig (the `#sprig` SVG) used as a section divider and a faint footer/CTA pattern. It is the brand's recurring fingerprint — use it sparingly, never as a loud background.
+## Logo — OFFICIAL FILES ONLY (owner's rule, 2026-10-23: never redraw or recreate the logo)
+- **Primary lockup:** `assets/logo.png` — Ahmed's real logo (maroon plaque, gold calligraphic mark + RAW-স্বাদ), supplied by the owner. Used in the site header, footer, and About "official mark" card, always shown as the complete image with rounded corners and a thin gold border. Never crop the artwork, never re-type the name as a substitute logo.
+- **Round badge:** `assets/logo-badge.png` — the RAW স্বাদ cream-circle badge from the Instagram profile. Used as the website favicon / app icon and as the hero medallion.
+- **Source resolution note:** the owner's supplied lockup file is small (99×49 native, upscaled ×6 with sharpening for the web copy). If the owner supplies a higher-resolution original, replace `assets/logo.png` with it (same filename) — no code change needed.
+- **Rules:** keep clear space around the logo, never stretch, rotate, re-colour, or place it on a clashing background. On the cream header it sits as a maroon plaque; on the deep-maroon footer it keeps its gold border so the plaque edge stays visible.
+- **Signature motif (decoration only, NOT the logo):** a small leaf sprig (the `#sprig` SVG) used as a section divider and a faint footer/CTA pattern — use it sparingly.
 
 ## Palette
 | Token | Hex | Usage |
