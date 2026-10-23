@@ -1,8 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RAW-SHAD">
-  <rect width="64" height="64" rx="14" fill="#FAF6EF"/>
-  <circle cx="32" cy="36" r="17" fill="#C56E1A"/>
-  <circle cx="32" cy="36" r="17" fill="none" stroke="#3E2719" stroke-width="2.5"/>
-  <path d="M32 19c1-6 5-10 11-11-1 6-4 10-9 12-1 0-2 0-2-1z" fill="#3A6E36"/>
-  <path d="M32 22c-2-2-6-3-9-1 2 3 5 4 8 3 1 0 1-1 1-2z" fill="#3A6E36" opacity=".8"/>
-  <path d="M22 36a10 10 0 0 0 20 0" fill="none" stroke="#FAF6EF" stroke-width="3" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rawshad">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#57181D"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="#C6A15B" stroke-width="2"/>
+  <!-- gold leaf -->
+  <path d="M32 10 C42 18 45 28 41 38 C38 45 33 48 32 48 C31 48 26 45 23 38 C19 28 22 18 32 10 Z" fill="#C6A15B"/>
+  <path d="M32 16 L32 44" stroke="#57181D" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M32 28 C36 27 39 25 40 22 M32 36 C28 35 25 33 24 30" stroke="#57181D" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- gold base -->
+  <ellipse cx="32" cy="51" rx="9" ry="3.4" fill="#C6A15B" opacity="0.85"/>
 </svg>
