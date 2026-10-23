@@ -291,3 +291,9 @@ table.admin-table{width:100%;border-collapse:collapse;background:var(--card);bor
 .hero-media img.hero-badge{width:104px;height:104px;aspect-ratio:1/1;object-fit:cover;border-radius:50%}
 .about-media .about-logo-card img{width:auto;height:64px;aspect-ratio:auto;object-fit:contain;box-shadow:none;border-radius:8px}
 @media (max-width:560px){.hero-media img.hero-badge{width:78px;height:78px}}
+
+/* === Bugfix: hidden must always win over component display rules === */
+[hidden]{display:none!important}
+/* Footer logo: cream chip so the official plaque reads intentional on deep maroon */
+.brand-logo-img.footer{background:#FAF4E8;padding:6px;border-radius:12px}
+@media (max-width:560px){.brand-logo-img{height:38px}}
