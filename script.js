@@ -604,15 +604,25 @@ if (typeof document !== 'undefined') {
       }).join('');
       wrap.innerHTML = '<div class="container view-wrap"><a class="back-link" href="#/">← Back to home</a>' +
         '<h1 class="section-title left" style="margin-top:.8rem">Orders on this device</h1>' +
-        '<p class="admin-banner">Demo view: these orders are stored only in this browser on this device. Real multi-device order management, staff logins and online payments need a backend — see ADMIN_GUIDE.md.</p>' +
+        '<p class="admin-banner">Demo view: these orders are stored only in this browser on this device. Real multi-device order management, staff logins and online payments need a backend.</p>' +
+        '<p class="admin-banner" role="alert"><strong>⚠ Price re-check before confirming any order:</strong> cart totals are calculated in the customer\u2019s browser, so a total in an emailed order can be wrong or tampered with. Always re-check every item and the total against the prices in <code>config.js</code> before you confirm an order — never confirm from the emailed total alone.</p>' +
         '<div class="admin-summary" id="adminSummary"></div>' +
         (orders.length ? '<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference / Date</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th></tr></thead><tbody>' + rows + '</tbody></table></div>' : '<div class="empty-state"><h3>No orders yet on this device</h3><p>Orders placed in this browser will appear here.</p></div>') +
-        '<div class="admin-actions"><button class="btn btn-primary" type="button" id="exportCsv">Export Orders (CSV)</button><button class="btn btn-ghost" type="button" id="exportJson">Export (JSON)</button></div>' +
+        '<div class="admin-actions"><button class="btn btn-primary" type="button" id="exportCsv">Export Orders (CSV)</button><button class="btn btn-ghost" type="button" id="exportJson">Export (JSON)</button><button class="btn btn-ghost" type="button" id="clearHandled">Delete handled orders on this device</button></div>' +
+        '<p class="admin-note">Delete handled orders removes only orders marked Delivered or Cancelled, and only from this browser\u2019s local storage. New and Confirmed orders are kept. Export a CSV/JSON backup first if you need a copy.</p>' +
         '</div>';
       showView('admin');
       renderAdminSummary(orders);
       var c = $('exportCsv'); if (c) c.addEventListener('click', function () { download('rawshad-orders.csv', ordersToCSV(store(ORDERS_KEY, [])), 'text/csv'); });
       var j = $('exportJson'); if (j) j.addEventListener('click', function () { download('rawshad-orders.json', JSON.stringify(store(ORDERS_KEY, []), null, 2), 'application/json'); });
+      var cl = $('clearHandled'); if (cl) cl.addEventListener('click', function () {
+        var all = store(ORDERS_KEY, []);
+        var handled = all.filter(function (o) { return o.status === 'Delivered' || o.status === 'Cancelled'; });
+        if (!handled.length) { alert('No handled (Delivered / Cancelled) orders to delete on this device.'); return; }
+        if (!confirm('Delete ' + handled.length + ' handled (Delivered / Cancelled) order(s) from THIS browser only? New and Confirmed orders will be kept. Export a backup first if you need a copy.')) return;
+        save(ORDERS_KEY, all.filter(function (o) { return o.status !== 'Delivered' && o.status !== 'Cancelled'; }));
+        renderAdmin();
+      });
     }
 
     /* router */
