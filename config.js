@@ -20,7 +20,7 @@
  *  - payments: these flags only change what the checkout SHOWS.
  *    cod / bkash / nagad = true makes that option selectable.
  *    Turning a flag on does NOT process real online payments —
- *    real online payment needs a backend (see ADMIN_GUIDE.md).
+ *    real online payment needs a backend (see the owner's private guide).
  *  - A product with price: null is NOT sold online yet. The site
  *    shows "Price on request" and sends people to Instagram.
  *    Give it real variants/prices here when you are ready.
