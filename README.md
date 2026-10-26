@@ -13,7 +13,7 @@ Plain HTML/CSS/JS — no build step, no frameworks. Deployed on GitHub Pages fro
 | `script.js` | Store engine: catalogue, cart, checkout, orders, local owner view |
 | `assets/` | Real product photos (beetroot.jpg, herbal.jpg, snacks.jpg) |
 | `favicon.svg` | Maroon + gold brand monogram |
-| `ADMIN_GUIDE.md` | Owner's beginner guide: prices, stock, WhatsApp, payments, orders |
+| Owner's guide (private copy, NOT published on the site) | Owner's beginner guide: prices, stock, WhatsApp, payments, orders — kept out of the public repo for security; ask TNT for the current copy |
 | `BRAND_IDENTITY.md` | Palette, logo lockup, photo and voice rules |
 
 ## How the store works
@@ -22,7 +22,7 @@ Plain HTML/CSS/JS — no build step, no frameworks. Deployed on GitHub Pages fro
 - Orders placed in a browser are also saved in that browser (localStorage) and can be viewed/exported by the owner at `#/admin` on the same device.
 
 ## Updating products
-Edit `config.js` only — prices, variants, stock flags (`inStock`), photos, categories. Full instructions in `ADMIN_GUIDE.md`.
+Edit `config.js` only — prices, variants, stock flags (`inStock`), photos, categories. Full instructions are in the owner's private guide (not published on the public site).
 
 ## Publishing
 1. Upload/commit all files (including `assets/`) to the GitHub repo root, `main` branch.
@@ -32,4 +32,4 @@ Edit `config.js` only — prices, variants, stock flags (`inStock`), photos, cat
 ## Honesty rules baked into this site
 - Only confirmed prices are displayed (Beetroot Powder sizes). Other products show "Price on request" and route to Instagram.
 - No invented delivery fees, discounts, reviews, certifications or phone numbers. WhatsApp ordering appears only when a real number is set in `config.js`.
-- Cash on delivery / bKash / Nagad show as "Not yet available" until the owner enables them — and enabling a flag only changes the label; real online payment needs a backend (see ADMIN_GUIDE.md).
+- Cash on delivery / bKash / Nagad show as "Not yet available" until the owner enables them — and enabling a flag only changes the label; real online payment needs a backend (see the owner's private guide).
