@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Rawshad is a single-page static shop: product and checkout views are
+       client-side hash routes (#/product/..., #/checkout), not crawlable URLs,
+       so only the real homepage URL is listed here. -->
+  <url>
+    <loc>https://nodexstation.github.io/rawshadshop/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
