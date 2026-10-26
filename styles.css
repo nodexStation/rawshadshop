@@ -272,6 +272,7 @@ table.admin-table{width:100%;border-collapse:collapse;background:var(--card);bor
 .admin-table th,.admin-table td{padding:.7rem .8rem;border-bottom:1px solid var(--line);text-align:left;font-size:.92rem;vertical-align:top}
 .admin-table th{background:var(--brand-maroon);color:#FFF3DC}
 .admin-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem}
+.admin-note{margin-top:.8rem;font-size:.9rem;color:var(--muted)}
 .admin-summary{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:1rem;font-weight:700;color:var(--brand-maroon)}
 
 /* Reveal on scroll */
